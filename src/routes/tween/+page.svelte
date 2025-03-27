@@ -18,6 +18,12 @@
 		});
 
 		tl2 = gsap.timeline({ repeat: 4, yoyo: true, repeatDelay: 0.5 });
+		tl.from('#demo', { ease: 'linear', autoAlpha: 0 })
+			.from('h1', { x: 80, duration: 1 })
+			.from('h2', { x: -80, duration: 1 }, '<')
+			.from('p', { y: 30 }, '-=0.2')
+			.from('button', { y: 50 }, '-=0.4')
+			.from('#items > g', { scale: 0, transformOrigin: '50% 50%', stagger: 0.1 }, '-=0.5');
 		tl2.from('.hole', { scale: 0, yoyo: true, repeat: 1 })
 			.fromTo('.herman', { y: 160, scaleY: 2 }, { y: -175, scaleY: 1 }, 0.2)
 			.to('.herman', { y: -4, ease: 'power1.in' }, '>')
@@ -27,17 +33,11 @@
 				duration: 0.2,
 				transformOrigin: '50% 100%', repeat: 1, yoyo: true
 			})
-			.to('.shadow', { opacity: 0, duration: 0.2 }, 0.7)
+			.to('.shadow', { opacity: 1, duration: 0.2 }, 0.7)
 			.to('.shadow', { scaleX: 0.7, ease: 'power1.in' }, ">");
-	});
 
+	});
 	function init() {
-		tl.from('#demo', { ease: 'linear', autoAlpha: 0 })
-			.from('h1', { x: 80, duration: 1 })
-			.from('h2', { x: -80, duration: 1 }, '<')
-			.from('p', { y: 30 }, '-=0.2')
-			.from('button', { y: 50 }, '-=0.4')
-			.from('#items > g', { scale: 0, transformOrigin: '50% 50%', stagger: 0.1 }, '-=0.5');
 	}
 
 </script>
