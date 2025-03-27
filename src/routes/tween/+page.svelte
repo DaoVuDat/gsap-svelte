@@ -445,12 +445,13 @@
     }
 
     .shadow {
-        opacity: 0;
-        position: absolute;
-        width: 150px;
-        height: 20px;
-        background: radial-gradient(rgba(100, 100, 100, 0.6), rgba(0, 0, 0, 0) 75%) no-repeat;
-        left: 125px;
-        top: 290px;
+        opacity:0;
+        position:absolute;
+        width:150px;
+        height:20px;
+        left:125px;
+        top:290px;
+        background: radial-gradient(rgb(100, 100, 100, 0.6), rgb(0, 0, 0, 0) 75%) no-repeat;
+				box-shadow: none;
     }
 </style>
